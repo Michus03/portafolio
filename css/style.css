@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Roboto}
+body{scroll-behavior:smooth}
+.texto{text-align:justify;line-height:1.7}
+
+.navbar{
+position:fixed;
+width:100%;
+display:flex;
+justify-content:space-between;
+padding:20px 10%;
+background:#111;
+z-index:1000;
+}
+.nav-links{display:flex;gap:30px;list-style:none}
+.nav-links a{
+color:#111;
+text-decoration:none;
+position:relative;
+}
+.nav-links a:hover{
+color:#ff4d4d;
+}
+
+.hero{
+    position:relative;
+    height:100vh;
+    overflow:hidden;
+}
+
+.hero-img{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;   /* llena sin deformar */
+    object-position:center 30%; /* mueve el enfoque */
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+    position:absolute;
+    top:65%;                 /* lo baja */
+    left:8%;
+    transform:translateY(-50%);
+    width:40%;
+    color:white;
+    text-align:justify;
+}
+
+.hero-content h1{
+    font-size:70px;    /* más grande */
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:24px;
+    line-height:1.6;
+}
+.overlay{position:absolute;inset:0;background:rgba(0,0,0,.6)}
+
+.section{padding:100px 10%}
+.fondo-claro{background:#f4f4f4}
+
+.grid-3{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:30px;
+    justify-content:center;
+    margin-top:40px;
+}
+
+
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+.mosaico{
+    margin-top: 40px;
+}
+
+/* ================= SERVICIOS: 3x2 COMPACTO VERTICAL ================= */
+.grid-5 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Siempre 3 columnas */
+    gap: 30px 0.1px; /* 10px vertical, 15px horizontal */
+    margin-top: 40px;
+    justify-items: center; /* Centra las cards horizontalmente */
+}
+
+.grid-5 .card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    text-align: center; /* Centra título y descripción */
+    width: 100%;
+    max-width: 320px; /* Ocupa más espacio de la fila */
+}
+
+.grid-5 .card:hover {
+    transform: translateY(-10px);
+}
+
+.grid-5 .card img {
+    width: 100%;
+    height: 180px; /* Altura uniforme */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+.grid-5 .card img:hover {
+    transform: scale(1.05);
+}
+
+.grid-5 .card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #ff4d4d;
+}
+
+.grid-5 .card .descripcion {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+.grid-6{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:30px;
+    justify-content:center;
+    margin-top:40px;
+}
+
+.grid-6 .card h3{
+    text-align: center;
+    color: #ff4d4d
+}
+
+.card{
+    width:100%;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+transition:.3s;
+}
+.card:hover{transform:translateY(-10px)}
+
+.precio button{
+width:100%;
+margin-top:20px;
+padding:10px;
+border:none;
+background:rgba(255, 77, 77, 0.97);
+color:white;
+cursor:pointer;
+border-radius: 10px;
+}
+.precio button:hover{background:#ff4d4d}
+
+.barra{background:#ddd;height:15px;border-radius:10px;margin:10px 0}
+.nivel{height:100%;border-radius:10px}
+.html{width:90%;background:#e44d26}
+.css{width:80%;background:#264de4}
+.js{width:70%;background:#f0db4f}
+
+/* ================= MOSAICO PORTAFOLIO ================= */
+/* ================= MOSAICO PORTAFOLIO CENTRADO ================= */
+.mosaico {
+    display: flex;
+    flex-wrap: wrap;           /* Permite que las imágenes bajen a la siguiente línea */
+    justify-content: center;   /* Centra las imágenes horizontalmente */
+    gap: 15px;                 /* Espacio entre imágenes */
+    margin-top: 40px;
+}
+
+/* Cada item */
+.mosaico .item {
+    width: 250px;             /* Tamaño fijo o mínimo */
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.mosaico .item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.mosaico .item:hover img {
+    transform: scale(1.05);
+}
+
+/* Overlay con título y descripción */
+.overlay-img {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s;
+    text-align: center;
+    padding: 15px;
+}
+
+.item:hover .overlay-img {
+    opacity: 1;
+}
+
+.overlay-img h3 {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.overlay-img p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+.blog-item{
+display:flex;
+background:white;
+margin-bottom:20px;
+}
+.blog-item img{
+width:300px;
+object-fit:cover;
+}
+.blog-item div{padding:20px}
+
+.contacto{background:#111;color:white;text-align:center}
+.redes img{width:40px;margin:10px}
+.icon-small{width:20px;vertical-align:middle;margin-right:10px}
+
+.logo{
+    text-align: justify;
+}
+.navbar{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    padding:20px 10%;
+    background:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+html{
+    scroll-behavior:smooth;
+}
+#inicio{
+    scroll-margin-top:80px;
+}
+
+.section{
+    padding:100px 10%;
+    text-align:center;
+}
+
+.section > *:not(h2){
+    text-align:left;
+}
+.section h2{
+    margin-bottom:50px;
+}
+
+.card{
+    width: 350px;
+}
+
+.card h3{
+    margin-bottom:20px;
+    font-size:22px;
+}
+
+.card p{
+    line-height:1.6;
+}
+
+.texto{
+ text-align: justify;
+}
+.card h3{
+    margin-bottom:25px;
+}
+
+.card h4{
+    margin-top:25px;
+    margin-bottom:5px;
+    color:#fe9393;
+}
+
+.card p{
+    margin-bottom:8px;
+}
+
+.card .texto{
+    margin-bottom:15px;
+    line-height:1.6;
+}
+.nav-links a{
+    color:#333;
+    text-decoration:none;
+    transition:0.3s;
+    padding-bottom:5px;
+}
+
+.nav-links a.active{
+    color:#ff4d4d;
+    border-bottom:2px solid #ff4d4d;
+    transform: scale(1.05);
+}
+.columna-pequena {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.card.pequeña {
+    max-width: 350px;
+}
+.contenedor-cards{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    gap:40px;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+
+/* Columna derecha (skills + idiomas) */
+.columna-lateral{
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+}
+
+/* ================= FILTROS PORTAFOLIO ================= */
+.filtros {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 15px; /* Espacio entre cada botón */
+    margin-bottom: 30px; /* Separación con el mosaico */
+    flex-wrap: wrap; /* Para que en pantallas pequeñas los botones bajen de línea */
+}
+
+.filtros button {
+    padding: 8px 16px;
+    border: none;
+    background: #ff4d4d;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    font-size: 14px;
+}
+
+.filtros button:hover {
+    background: #e03b3b;
+    transform: scale(1.05);
+}
+
+/* ================= BOTONES BLOG ================= */
+.blog-item button {
+    background: #ff4d4d;          /* Color principal */
+    color: white;                  /* Texto blanco */
+    border: none;                  /* Sin borde */
+    border-radius: 5px;            /* Bordes redondeados */
+    padding: 10px 20px;            /* Espaciado interno cómodo */
+    font-size: 14px;               /* Tamaño de texto legible */
+    cursor: pointer;               /* Mano al pasar el mouse */
+    transition: all 0.3s ease;     /* Transición suave para hover */
+    display: inline-block;         /* Alinea bien dentro del div */
+    text-align: center;            /* Texto centrado */
+}
+
+/* Efecto hover */
+.blog-item button:hover {
+    background: #e63946;           /* Color ligeramente más oscuro */
+    transform: scale(1.05);        /* Ligero aumento al pasar el mouse */
+}
+
+/* ================= CONTACTO ================= */
+.contacto {
+    background: none;       /* Sin fondo negro */
+    text-align: center;
+    padding: 100px 10%;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;    /* Centra horizontalmente todo el contenido */
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    position: relative;
+}
+
+.contact-form h2::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: #ff4d4d;
+    margin-top: 5px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #ff4d4d;
+    box-shadow: 0 0 5px rgba(255, 77, 77, 0.5);
+}
+
+.contact-form button {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #e63946;
+    transform: scale(1.02);
+}
+
+/* ================= BLOQUE DE CONTACTO DEBAJO DEL FORMULARIO ================= */
+.contact-info {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    text-align: center;
+    color: #333;
+}
+
+.contact-info .redes img {
+    width: 40px;
+    margin: 5px;
+}
+
+.contact-info p {
+    font-size: 16px;
+}
+
+.contact-info .icon-small {
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
