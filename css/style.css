@@ -283,6 +283,7 @@ html{
 
 .card{
     width: 350px;
+    max width: 350px;
 }
 
 .card h3{
@@ -344,6 +345,13 @@ html{
     gap:40px;
     flex-wrap:wrap;
     margin-top:40px;
+}
+
+#sobre-mi .contenedor-cards{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
 }
 
 /* Columna derecha (skills + idiomas) */
@@ -494,4 +502,5 @@ html{
     width: 20px;
     vertical-align: middle;
     margin-right: 10px;
+
 }
